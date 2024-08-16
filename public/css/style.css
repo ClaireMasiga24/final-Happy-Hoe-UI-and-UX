@@ -1,0 +1,388 @@
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8; /* Light grey background */
+    color: #333;
+}
+
+/* Header styles */
+header .top-banner {
+    background-color: #34495e; /* Dark slate blue background */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+header .top-banner a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+header .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2980b9; /* Elegant blue background */
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #dfe6e9; /* Subtle bottom border */
+}
+
+header .logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f39c12; /* Hover effect color */
+}
+
+header .user-options {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header .user-options button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #ffffff;
+    color: #2980b9; /* Elegant blue text */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .user-options button:hover {
+    background-color: #2980b9; /* Blue background on hover */
+    color: white;
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px 0 0 5px;
+    max-width: 500px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #2980b9; /* Elegant blue background */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #1f618d; /* Darker blue on hover */
+}
+
+/* Main banner styles */
+.main-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2980b9; /* Elegant blue background */
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 40%;
+    color: #ffffff;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.banner-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.banner-content .shop-now-btn {
+    padding: 12px 25px;
+    background-color: #f39c12; /* Bright yellow-orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.banner-content .shop-now-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+.banner-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner-slider img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+/* Daily Summary Section */
+.daily-summary {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.daily-summary h2 {
+    color: #2980b9; /* Elegant blue text color */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Low Stock Alerts Section */
+.low-stock-alerts {
+    padding: 15px;
+    background-color: #ffffff; /* White background */
+    margin-bottom: 20px;
+    border: 2px solid #2980b9; /* Elegant blue border */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.low-stock-alerts h2 {
+    color: #2980b9; /* Elegant blue text color */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Icon before heading */
+.low-stock-alerts h2::before {
+    content: "\26A0";
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Alert item styles */
+.low-stock-alerts .alert-item {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-left: 5px solid #2980b9; /* Elegant blue border */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    animation: pulse 2s infinite;
+}
+
+/* Exclamation icon for each alert item */
+.low-stock-alerts .alert-item::before {
+    content: "\2757";
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Subtle Pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Real-Time Stock Updates Section */
+.stock-available {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stock-available h2 {
+    color: #2980b9; /* Elegant blue text color */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.stock-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between items */
+}
+
+.stock-item {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust percentage as needed */
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.stock-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.stock-item h3 {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.stock-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+.stock-available .shop-now-btn {
+    padding: 12px 25px;
+    background-color: #f39c12; /* Bright yellow-orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.stock-available .shop-now-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .stock-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .stock-item {
+        flex: 1 1 100%; /* One item per row */
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #34495e; /* Dark slate blue background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #dfe6e9; /* Subtle top border */
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #f39c12; /* Hover effect color */
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.primary {
+    background-color: #2980b9; /* Elegant blue background */
+    color: white;
+}
+
+button.primary:hover {
+    background-color: #1f618d; /* Darker blue on hover */
+}
+
+button.secondary {
+    background-color: #f39c12; /* Bright yellow-orange */
+    color: white;
+}
+
+button.secondary:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
