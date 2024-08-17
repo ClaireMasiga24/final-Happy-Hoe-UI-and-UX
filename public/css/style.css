@@ -1,9 +1,13 @@
-/* Header styles */
-header {
-    display: flex;
-    flex-direction: column;
+/* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8; /* Light grey background */
+    color: #333;
 }
 
+/* Header styles */
 header .top-banner {
     background-color: #34495e; /* Dark slate blue background */
     color: white;
@@ -20,16 +24,12 @@ header .top-banner a {
 
 header .main-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: #2980b9; /* Elegant blue background */
     padding: 15px 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid #dfe6e9; /* Subtle bottom border */
-}
-
-header .logo {
-    margin-bottom: 10px; /* Space between logo and navigation */
 }
 
 header .logo img {
@@ -46,7 +46,6 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
 }
 
 header nav ul li {
@@ -69,26 +68,32 @@ header .user-options {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 10px; /* Space between navigation and user options */
 }
 
-header .user-options a {
+header .user-options button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #ffffff;
+    color: #2980b9; /* Elegant blue text */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header .user-options button:hover {
+    background-color: #2980b9; /* Blue background on hover */
     color: white;
-    text-decoration: none;
 }
 
-header .user-options a:hover {
-    color: #f39c12; /* Hover effect color */
-}
-
-header .search-bar {
+/* Search bar styles */
+.search-bar {
     display: flex;
     justify-content: center;
     padding: 15px;
     background-color: #ffffff; /* White background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin-top: 20px; /* Space between user options and search bar */
 }
 
 .search-bar input {
@@ -116,8 +121,15 @@ header .search-bar {
 
 /* Main banner styles */
 .main-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2980b9; /* Elegant blue background */
+    padding: 30px;
     position: relative;
     overflow: hidden;
+    height: 400px;
+    border-radius: 10px;
 }
 
 .banner-content {
@@ -125,107 +137,252 @@ header .search-bar {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 40%;
+    color: #ffffff;
     text-align: center;
+    z-index: 1;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.banner-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.banner-content .shop-now-btn {
+    padding: 12px 25px;
+    background-color: #f39c12; /* Bright yellow-orange */
     color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
-    padding: 20px;
-    border-radius: 8px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.banner-content .shop-now-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
 }
 
 .banner-slider {
     display: flex;
-    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.slide {
-    flex: 0 0 auto;
-    max-width: 100%;
+.banner-slider img {
+    width: 100%;
     height: auto;
-    margin-right: 10px;
+    transition: transform 0.5s ease;
 }
 
 /* Daily Summary Section */
 .daily-summary {
     padding: 20px;
-    background-color: #f4f4f4; /* Light grey background */
+    background-color: #ffffff; /* White background */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Real-Time Stock Updates */
+.daily-summary h2 {
+    color: #2980b9; /* Elegant blue text color */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Low Stock Alerts Section */
+.low-stock-alerts {
+    padding: 15px;
+    background-color: #ffffff; /* White background */
+    margin-bottom: 20px;
+    border: 2px solid #2980b9; /* Elegant blue border */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.low-stock-alerts h2 {
+    color: #2980b9; /* Elegant blue text color */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Icon before heading */
+.low-stock-alerts h2::before {
+    content: "\26A0";
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Alert item styles */
+.low-stock-alerts .alert-item {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-left: 5px solid #2980b9; /* Elegant blue border */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    animation: pulse 2s infinite;
+}
+
+/* Exclamation icon for each alert item */
+.low-stock-alerts .alert-item::before {
+    content: "\2757";
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* Subtle Pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* Real-Time Stock Updates Section */
 .stock-available {
     padding: 20px;
     background-color: #ffffff; /* White background */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stock-available h2 {
+    color: #2980b9; /* Elegant blue text color */
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
 .stock-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; /* Add space between items */
 }
 
 .stock-item {
-    flex: 1;
-    min-width: 150px;
+    flex: 1 1 calc(33.333% - 20px); /* Adjust percentage as needed */
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
 .stock-item img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
-/* Low Stock Alerts */
-.low-stock-alerts {
-    padding: 20px;
-    background-color: #f9c2c2; /* Light pink background for alerts */
-    border-radius: 8px;
+.stock-item h3 {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.stock-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+.stock-available .shop-now-btn {
+    padding: 12px 25px;
+    background-color: #f39c12; /* Bright yellow-orange */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.stock-available .shop-now-btn:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .stock-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .stock-item {
+        flex: 1 1 100%; /* One item per row */
+    }
 }
 
 /* Footer styles */
 footer {
     background-color: #34495e; /* Dark slate blue background */
     color: white;
-    text-align: center;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
+    border-top: 1px solid #dfe6e9; /* Subtle top border */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    header .main-header {
-        padding: 10px;
-    }
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin: 0 10px;
+}
 
-    header .logo img {
-        width: 80px;
-        height: 80px;
-    }
+footer a:hover {
+    color: #f39c12; /* Hover effect color */
+}
 
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Button styles */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-    header .user-options {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 15px;
-    }
+button.primary {
+    background-color: #2980b9; /* Elegant blue background */
+    color: white;
+}
 
-    header .search-bar {
-        flex-direction: column;
-        width: 90%;
-        margin-top: 20px;
-    }
+button.primary:hover {
+    background-color: #1f618d; /* Darker blue on hover */
+}
 
-    .search-bar input {
-        width: 100%;
-        border-radius: 5px;
-    }
+button.secondary {
+    background-color: #f39c12; /* Bright yellow-orange */
+    color: white;
+}
 
-    .search-bar button {
-        width: 100%;
-        border-radius: 0 0 5px 5px;
-    }
+button.secondary:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
