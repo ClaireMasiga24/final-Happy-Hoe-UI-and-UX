@@ -1,3 +1,4 @@
+
 /* General body styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -166,6 +167,7 @@ header .user-options button:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    display: inline-block;
 }
 
 .banner-content .shop-now-btn:hover {
@@ -308,22 +310,21 @@ header .user-options button:hover {
 
 .stock-available .shop-now-btn {
     padding: 12px 25px;
-    background-color: #f39c12; /* Bright yellow-orange
-    /* Bright yellow-orange */
+    background-color: #f39c12; /* Bright yellow-orange */
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .stock-available .shop-now-btn:hover {
     background-color: #e67e22; /* Darker orange on hover */
 }
 
-/* Reviews Section */
+/* Review Section */
 .reviews {
     padding: 20px;
     background-color: #ffffff; /* White background */
@@ -339,85 +340,124 @@ header .user-options button:hover {
 }
 
 .review-item {
-    background-color: #f9f9f9; /* Light grey background */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    border-bottom: 1px solid #dfe6e9;
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
-.review-item img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.review-item:last-child {
+    border-bottom: none;
 }
 
 .review-item p {
-    font-size: 1em;
-    color: #333;
+    margin: 0;
 }
 
-.review-item h3 {
-    font-size: 1.2em;
-    margin-top: 10px;
+.review-item .reviewer {
     font-weight: bold;
 }
 
-/* Footer Section */
+/* Deal of the Day Section */
+.deals-of-the-day {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.deals-of-the-day h2 {
+    color: #2980b9; /* Elegant blue text color */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.deals-of-the-day .deal-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dfe6e9;
+}
+
+.deals-of-the-day .deal-item:last-child {
+    border-bottom: none;
+}
+
+.deals-of-the-day .deal-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.deals-of-the-day .deal-item .deal-info {
+    flex: 1;
+}
+
+.deals-of-the-day .deal-item .deal-info h3 {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.deals-of-the-day .deal-item .deal-info p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.deals-of-the-day .deal-item .deal-info .deal-price {
+    font-size: 1.5em;
+    color: #f39c12; /* Bright yellow-orange */
+    font-weight: bold;
+}
+
+/* Footer styles */
 footer {
     background-color: #34495e; /* Dark slate blue background */
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
-}
-
-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    gap: 10px;
-}
-
-footer .social-icons a {
-    color: white;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-footer .social-icons a:hover {
-    color: #f39c12; /* Hover effect color */
+    border-top: 1px solid #dfe6e9; /* Subtle top border */
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-    .search-bar input {
-        width: 60%;
-    }
-
-    .stock-item {
-        flex: 1 1 calc(50% - 20px);
-    }
+footer .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
 }
 
+footer .social-media a {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    color: #f39c12; /* Hover effect color */
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     header .main-header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
     }
 
-    header .user-options {
-        justify-content: center;
-        margin-top: 10px;
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
     }
 
     .search-bar input {
@@ -425,25 +465,32 @@ footer p {
         margin-bottom: 10px;
     }
 
+    .search-bar button {
+        width: 100%;
+    }
+
+    .banner-slider img {
+        height: auto; /* Ensure responsiveness of images */
+    }
+
     .stock-item {
         flex: 1 1 100%;
     }
+
+    .review-item,
+    .deal-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .review-item:last-child,
+    .deal-item:last-child {
+        border-bottom: none;
+    }
 }
 
+/* Mobile specific adjustments */
 @media (max-width: 480px) {
-    header .main-header {
-        padding: 10px;
-    }
-
-    header .main-header h1 {
-        font-size: 1.5em;
-    }
-
-    .search-bar input {
-        width: 100%;
-        padding: 8px;
-    }
-
     .banner-content h1 {
         font-size: 1.8em;
     }
@@ -452,11 +499,9 @@ footer p {
         font-size: 1.2em;
     }
 
-    .stock-item {
-        padding: 10px;
-    }
-
-    .review-item {
-        padding: 10px;
+    .stock-item img,
+    .deal-item img {
+        width: 100px;
+        height: 100px;
     }
 }
