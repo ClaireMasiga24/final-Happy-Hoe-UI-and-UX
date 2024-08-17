@@ -5,63 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Hoe Grocery Ltd.</title>
-
-    <!-- Link to Bootstrap CSS -->
-    <link rel="stylesheet" href="public/css/bootstrap-5.3.3-dist/css/bootstrap.min.css-5">
-    <!-- Link to Custom CSS -->
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="top-banner bg-primary text-white text-center py-2">
+        <div class="top-banner">
             <span>Efficient Inventory Management | Optimize Your Stock and Boost Performance</span>
-            <a href="views/login.html" class="btn btn-light">Explore Our Inventory Solutions</a>
+            <a href="views/login.html" class="btn">Explore Our Inventory Solutions</a>
         </div>
 
-        <div class="main-header d-flex flex-column flex-md-row align-items-center justify-content-between p-3 bg-light">
+        <div class="main-header">
             <div class="logo">
-                <img src="public/images/OIP (4).jpeg" alt="Happy Hoe Grocery Ltd. Logo" class="img-fluid">
+                <img src="public/images/OIP (4).jpeg" alt="Happy Hoe Grocery Ltd. Logo">
             </div>
             <nav>
-                <ul class="nav list-unstyled d-flex flex-column flex-md-row mb-0">
-                    <li class="nav-item"><a class="nav-link" href="views/login.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="views/login.html">Categories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="views/login.html">Reviews</a></li>
-                    <li class="nav-item"><a class="nav-link" href="views/login.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="views/login.html">Contact Us</a></li>
+                <ul class="nav-list">
+                    <li><a href="views/login.html">Home</a></li>
+                    <li><a href="views/login.html">Categories</a></li>
+                    <li><a href="views/login.html">Reviews</a></li>
+                    <li><a href="views/login.html">About Us</a></li>
+                    <li><a href="views/login.html">Contact Us</a></li>
                 </ul>
             </nav>
-            <div class="user-options d-flex flex-column flex-md-row">
-                <a href="/views/login.html" class="btn btn-outline-secondary">Deliver to: UG</a>
-                <a href="/views/login.html" class="btn btn-outline-secondary">English-UGX</a>
-                <a href="/views/login.html" class="btn btn-outline-secondary">Sign in</a>
+            <div class="user-options">
+                <a href="/views/login.html">Deliver to: UG</a>
+                <a href="/views/login.html">English-UGX</a>
+                <a href="/views/login.html">Sign in</a>
             </div>
         </div>
-
-        <div class="search-bar d-flex flex-column flex-md-row align-items-center justify-content-between p-3">
-            <input type="text" id="searchInput" class="form-control me-2 mb-2 mb-md-0" placeholder="Search products, brands and categories">
-            <button onclick="window.location.href='views/login.html'" class="btn btn-primary">Search</button>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products, brands and categories">
+            <button onclick="window.location.href='login.html'">Search</button>
         </div>
     </header>
 
     <main>
-        <section class="main-banner position-relative">
-            <div class="banner-content text-center text-white position-absolute top-50 start-50 translate-middle">
+        <section class="main-banner">
+            <div class="banner-content">
                 <h1>Optimize Your Inventory</h1>
                 <h2>Streamline Your Stock Management and Maximize Efficiency</h2>
-                <a href="views/login.html" class="btn btn-light">Discover Solutions</a>
+                <a href="views/login.html" class="shop-now-btn">Discover Solutions</a>
             </div>
-            <div class="banner-slider d-flex overflow-auto">
-                <img class="slide img-fluid" src="public/images/images (22).jpeg" alt="Rice">
-                <img class="slide img-fluid" src="public/images/images (31).jpeg" alt="Soybeans">
-                <img class="slide img-fluid" src="public/images/images (80).jpeg" alt="Vegetables">
-                <img class="slide img-fluid" src="public/images/happy-couple-enjoying-day-out-together_972324-68154.jpg" alt="People">
+            <div class="banner-slider">
+                <img class="slide" src="public/images/images (22).jpeg" alt="Rice">
+                <img class="slide" src="public/images/images (31).jpeg" alt="Soybeans">
+                <img class="slide" src="public/images/images (80).jpeg" alt="Vegetables">
+                <img class="slide" src="public/images/happy-couple-enjoying-day-out-together_972324-68154.jpg" alt="People">
             </div>
         </section>
 
         <!-- Daily Summary Section -->
-        <section class="daily-summary p-3">
+        <section class="daily-summary">
             <h2>Daily Summary</h2>
             <p>Total Sales Today: UGX 5,250,000</p>
             <p>Total Stock Added: 200 kg</p>
@@ -69,36 +64,36 @@
         </section>
 
         <!-- Real-Time Stock Updates -->
-        <section id="stock-available" class="stock-available p-3">
+        <section id="stock-available" class="stock-available">
             <h2>Real-Time Stock Updates</h2>
-            <div class="stock-list row">
-                <div class="stock-item col-12 col-md-6 mb-3">
-                    <img src="public/images/images (56).jpeg" alt="Rice Stock" class="img-fluid">
+            <div class="stock-list">
+                <div class="stock-item">
+                    <img src="public/images/images (56).jpeg" alt="Rice Stock">
                     <h3>Rice</h3>
                     <p>Amount Available: 120 kg</p>
                 </div>
-                <div class="stock-item col-12 col-md-6 mb-3">
-                    <img src="public/images/images (54).jpeg" alt="Soybeans Stock" class="img-fluid">
+                <div class="stock-item">
+                    <img src="public/images/images (54).jpeg" alt="Soybeans Stock">
                     <h3>Soybeans</h3>
                     <p>Amount Available: 75 kg</p>
                 </div>
             </div>
-            <a href="views/login.html" class="btn btn-primary">View More Stock</a>
+            <a href="views/login.html" class="shop-now-btn">View More Stock</a>
         </section>
 
         <!-- Low Stock Alerts -->
-        <section class="low-stock-alerts p-3">
+        <section class="low-stock-alerts">
             <h2>Low Stock Alerts</h2>
-            <div class="alert-item mb-2">
+            <div class="alert-item">
                 <p>Rice: 20 kg remaining</p>
             </div>
-            <div class="alert-item mb-2">
+            <div class="alert-item">
                 <p>Soybeans: 15 kg remaining</p>
             </div>
         </section>
     </main>
 
-    <footer class="bg-light text-center p-3">
+    <footer>
         <div class="footer-content">
             <p>Contact us: +256780196215 | clairemasiga22@gmail.com</p>
             <p>&copy; 2024 Happy Hoe Grocery Ltd.</p>
