@@ -114,6 +114,83 @@ header .search-bar {
     background-color: #1f618d; /* Darker blue on hover */
 }
 
+/* Main banner styles */
+.main-banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.banner-slider {
+    display: flex;
+    overflow-x: auto;
+}
+
+.slide {
+    flex: 0 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Daily Summary Section */
+.daily-summary {
+    padding: 20px;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Real-Time Stock Updates */
+.stock-available {
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+}
+
+.stock-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stock-item {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.stock-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Low Stock Alerts */
+.low-stock-alerts {
+    padding: 20px;
+    background-color: #f9c2c2; /* Light pink background for alerts */
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #34495e; /* Dark slate blue background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     header .main-header {
