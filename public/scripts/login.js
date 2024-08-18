@@ -26,5 +26,5 @@ let signupButton = document.querySelector('#signup-button');
 
 signupButton.addEventListener('click', (event) => {
   event.preventDefault(); // Prevent any default behavior (though in this case, it's mostly precautionary)
-  window.location.href = '/views/signUp.html'; // Update this path to match your signup page location
+  window.location.href = 'views/signUp.html'; // Update this path to match your signup page location
 });
