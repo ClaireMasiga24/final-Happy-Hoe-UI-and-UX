@@ -1,4 +1,4 @@
-//Below I'm writing my Dom manipulation
+// Existing code for login functionality
 let loginButton = document.querySelector('#login-button');
 let usernameInput = document.querySelector('#username');
 let passwordInput = document.querySelector('#password');
@@ -21,3 +21,10 @@ loginButton.addEventListener('click', (event) => {
   }
 });
 
+// So that when I  click sign Up button I am taken to signUp.html
+let signupButton = document.querySelector('#signup-button');
+
+signupButton.addEventListener('click', (event) => {
+  event.preventDefault(); // Prevent any default behavior (though in this case, it's mostly precautionary)
+  window.location.href = '/views/signUp.html'; // Update this path to match your signup page location
+});

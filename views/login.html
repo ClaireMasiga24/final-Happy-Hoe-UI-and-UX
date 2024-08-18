@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Hoe Grocery</title>
   <link rel="stylesheet" href="/public/css/login.css">
 </head>
 <body class="firstPage">
   <header>
-    <h2 id="welcome-heading" style="font:italic ; color: black;"> Happy Hoe Grocery</h2>
+    <h2 id="welcome-heading" style="font-style: italic; color: black;">Happy Hoe Grocery</h2>
   </header>
   <form>
     <div class="row">
@@ -18,16 +20,18 @@
       <input type="password" id="password" name="password" required>
     </div>
     <div class="row">
-      <button id="login-button">Login</button>
+      <button id="login-button" type="submit">Login</button>
     </div>
     <div class="row">
-      <p>Don't have an account? <button id="Signup-button">Sign-Up</button></p>
+      <p>Don't have an account? <button id="signup-button" type="button">Sign-Up</button></p>
     </div>
-    <input type="checkbox" id="remember-me" />
-    <label for="remember-me" style="font-size: small;">Stay Logged-in</label>
+    <div class="row">
+      <input type="checkbox" id="remember-me" />
+      <label for="remember-me" style="font-size: small;">Stay Logged-in</label>
+    </div>
   </form>
   <footer>
-    <p id="tagline">© Copyright 2024.All rights reserved.</p>
+    <p id="tagline">© Copyright 2024. All rights reserved.</p>
   </footer>
   <script src="/public/scripts/login.js"></script>
 </body>
