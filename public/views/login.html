@@ -10,7 +10,7 @@
   <header>
     <h2 id="welcome-heading" style="font-style: italic; color: black;">Happy Hoe Grocery</h2>
   </header>
-  <form>
+  <form id="loginForm">
     <div class="row">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required>
@@ -18,6 +18,23 @@
     <div class="row">
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required>
+      <input type="checkbox" id="show-password"> Show Password
+    </div>
+    <div class="row">
+      <label for="role">Role:</label>
+      <select id="role" name="role" required>
+        <option value="">Select your role</option>
+        <option value="manager">Manager</option>
+        <option value="sales_agent">Sales Agent</option>
+      </select>
+    </div>
+    <div class="row">
+      <label for="branch">Branch:</label>
+      <select id="branch" name="branch" required>
+        <option value="">Select your branch</option>
+        <option value="magna">Maganjo</option>
+        <option value="matugga">Matugga</option>
+      </select>
     </div>
     <div class="row">
       <button id="login-button" type="submit">Login</button>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGL Dashboard</title>
+    <link rel="stylesheet" href="/public/css/manager.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/public/images/OIP (4).jpeg" alt="KGL Logo" class="logo">
+            <h1>KGL Procurement Dashboard</h1>
+            <button id="toggleTheme">Toggle Dark Mode</button>
+        </div>
+    </header>
+    <main>
+        <!-- Notifications -->
+        <div id="notification" class="notification hidden">
+            <p id="notificationMessage"></p>
+            <button id="closeNotification">&times;</button>
+        </div>
+
+        <!-- Procurement Entry -->
+        <section class="dashboard-section">
+            <div class="dashboard-card">
+                <h2>Procurement Entry</h2>
+                <button id="openModal">Add Procurement</button>
+                <button id="logoutButton">Log Out</button>
+            </div>
+        </section>
+
+        <!-- Search Bar -->
+        <section class="dashboard-section">
+            <div class="dashboard-card">
+                <h2>Search Procurements</h2>
+                <input type="text" id="search" placeholder="Search procurements...">
+            </div>
+        </section>
+
+        <!-- Summary Cards -->
+        <section class="dashboard-section">
+            <div class="dashboard-card summary-card">
+                <h2>Total Procurements</h2>
+                <div class="card-content">
+                    <p id="totalProcurements">0</p>
+                </div>
+            </div>
+            <div class="dashboard-card summary-card">
+                <h2>Total Cost</h2>
+                <div class="card-content">
+                    <p id="totalCost">0 UgX</p>
+                </div>
+            </div>
+            <div class="dashboard-card summary-card">
+                <h2>Average Tonnage</h2>
+                <div class="card-content">
+                    <p id="avgTonnage">0 kg</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Forms with Auto-Suggestions -->
+        <div id="procurementModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Record Procurement</h2>
+                <form id="procurementForm">
+                    <label for="produceName">Name of Produce:</label>
+                    <input type="text" id="produceName" name="produceName" required>
+
+                    <label for="produceType">Type of Produce:</label>
+                    <input type="text" id="produceType" name="produceType" required pattern="[A-Za-z]{2,}">
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <label for="tonnage">Tonnage (kg):</label>
+                    <input type="number" id="tonnage" name="tonnage" required min="100">
+
+                    <label for="cost">Cost (UgX):</label>
+                    <input type="number" id="cost" name="cost" required min="10000">
+
+                    <label for="dealerName">Dealer Name:</label>
+                    <input type="text" id="dealerName" name="dealerName" required pattern="[A-Za-z0-9]{2,}">
+
+                    <label for="branch">Branch Name:</label>
+                    <select id="branch" name="branch" required>
+                        <option value="">Select Branch</option>
+                        <option value="Matugga">Matugga</option>
+                        <option value="Maganjo">Maganjo</option>
+                    </select>
+
+                    <label for="contact">Dealer Contact:</label>
+                    <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}">
+
+                    <label for="price">Selling Price (UgX):</label>
+                    <input type="number" id="price" name="price" required min="10000">
+
+                    <button type="submit">Record Procurement</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Help and Support Section -->
+        <section class="help-section">
+            <h2>Help & Support</h2>
+            <p>If you need help with using the dashboard or have any questions, please contact our support team.</p>
+            <button id="openHelp">Contact Support</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 KGL</p>
+    </footer>
+    <script src="/public/scripts/manager.js"></script>
+</body>
+</html>
+    
