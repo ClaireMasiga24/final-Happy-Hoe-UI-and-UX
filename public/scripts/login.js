@@ -29,9 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Function to verify login credentials and redirect based on role
 function verifyLogin(username, password, role) {
   // Role-specific usernames
-  const managerUsernames = ['managerMike', 'managerSarah'];
-  const salesAgentUsernames = ['salesJohn', 'salesLily'];
-  const validPassword = 'see';
+  const managerUsernames = ['managerSsali', 'managerNamakula'];
+  const salesAgentUsernames = ['salesMubiru', 'salesAchieng'];
+  const validPassword = 'Deathyhallows#!';
 
   if (password === validPassword) {
     if (role === 'manager' && managerUsernames.includes(username)) {

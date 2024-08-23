@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KGL Sales Agent Dashboard</title>
+    <link rel="stylesheet" href="/public/css/salesagent.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="/public/images/OIP (4).jpeg" alt="KGL Logo" class="logo">
+            <h1>KGL Sales Agent Dashboard</h1>
+            <button id="logoutButton" class="action-btn">Log Out</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h2>Welcome, Sales Agent!</h2>
+            <p>Let's record your latest sale. Ensure to provide all required details.</p>
+        </section>
+
+        <!-- Sales Entry Form -->
+        <section class="form-section">
+            <div class="form-card">
+                <h2>Record a Sale</h2>
+                <form id="salesForm">
+                    <label for="produceName">Name of Produce:</label>
+                    <input type="text" id="produceName" name="produceName" required pattern="[A-Za-z0-9\s]{2,}">
+
+                    <label for="tonnage">Tonnage (kg):</label>
+                    <input type="number" id="tonnage" name="tonnage" required min="1">
+
+                    <label for="amountPaid">Amount Paid (UgX):</label>
+                    <input type="number" id="amountPaid" name="amountPaid" required min="5">
+
+                    <label for="salesAgentName">Your Name:</label>
+                    <input type="text" id="salesAgentName" name="salesAgentName" required pattern="[A-Za-z0-9\s]{2,}">
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <button type="submit">Submit Sale</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Receipt Section -->
+        <section id="receiptSection" class="receipt-section hidden">
+            <h2>Sale Receipt</h2>
+            <div id="receiptContent">
+                <!-- Receipt details will be injected here -->
+            </div>
+            <button id="printReceipt" class="action-btn">Print Receipt</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 KGL</p>
+    </footer>
+
+    <script src="/public/scripts/salesagent.js"></script>
+</body>
+</html>
